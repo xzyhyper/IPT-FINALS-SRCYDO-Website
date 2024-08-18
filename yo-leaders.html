@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Youth Organization | SRCYDO Website</title>
+    <link rel="icon" type="image/x-icon" href="SRCYDO MAIN IMAGES/SRCYDO Logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Navbar */
+.navbar-custom {
+    background-color: #9e0c0c;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-subtitle {
+    font-size: 0.875rem;
+}
+
+.navbar-nav .btn {
+    margin-right: 30px;
+    border-radius: 20px; 
+    font-weight: bold;   
+    padding: 10px 20px;  
+    background-color: #f8f9fa; 
+    color: #9e0c0c;    
+    border: 2px solid #9e0c0c; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.navbar-nav .btn:hover {
+    background-color: #3a1414;
+    color: #f8f9fa;
+}
+
+.navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+
+/* Hover Effect for Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2e6ea; 
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Footer */
+.footer-links p {
+    margin-bottom: 8px; 
+}
+.footer-links a.page-link:hover {
+    text-decoration: underline !important;
+}
+.footer-links a:hover,
+    .location-link:hover {
+        text-decoration: underline !important;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Back to Top Button */
+.stt{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(223, 255, 128) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    box-shadow: 0 0.25rem 0.5rem 0 gray;
+    opacity: 0.6;
+    scroll-behavior: smooth;
+}
+.stt:hover{
+    opacity: 0.9;
+}
+.stt:focus{
+    opacity: 0.9;
+}
+.stt:active{
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/* MAIN CONTENTS OF LIST OF YOUTH ORGANIZATION */
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+#state {
+    height: 100vh;
+    overflow-y: auto;
+    white-space: nowrap;
+    transition: width 0.3s;
+}
+
+#state.collapsed {
+    width: 94px;
+}
+
+#state .nav-link {
+    color: maroon;
+}
+
+#state .nav-link:hover {
+    background-color: maroon;
+    color: white;
+}
+
+.nav-link {
+    display: block;
+    width: 120%;
+    padding: 10px 15px;
+    margin: 0;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#state.collapsed .nav-link::before {
+    content: attr(data-abbrev);
+    text-align: center;
+    width: 100%;
+}
+
+.collapse-btn {
+    cursor: pointer;
+    padding: 5px;
+    background-color: maroon;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 765px) {
+    #state {
+        height: 50vh;
+        width: 100%;
+    }
+    
+    #state.collapsed {
+        width: 100%;
+    }
+    
+    .collapse-btn {
+        display: none;
+    }
+
+    #state.collapsed .nav-link::before {
+        content: none;
+    }
+}
+/* ---------- MAIN CONTENT ---------- */
+.yo-leaders .main-content {
+    padding-top: 20px;
+}
+
+.yo-leaders .text-center {
+    padding-bottom: 20px;
+}
+
+.yo-leaders p {
+    padding-top: 10px;
+}
+
+.apply-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: maroon;
+    border: 1px solid maroon;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: maroon;
+    color: white;
+}
+
+.btn-maroon {
+    background-color: maroon;
+    color: white;
+    border-color: maroon;
+}
+
+.btn-maroon:hover {
+    background-color: white;
+    color: maroon;
+}
+
+.btn-maroon {
+    background-color: maroon;
+    color: white;
+    border-color: maroon;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-maroon:hover {
+    background-color: white;
+    color: maroon;
+}
+
+.yo-leaders .card {
+    margin: 0 auto;
+}
+
+.yo-leaders .card-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.yo-leaders .text-center {
+    border: 1px solid maroon;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.yo-leaders .img-fluid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-right-to-left {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-right-to-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!---------------------------- = DON'T REMOVE = ------------------------------>
+    <!---------------------------- = NAVBAR = ------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white d-flex align-items-center" href="home.html">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="logo me-2">
+                    <div class="text-start">
+                        <div id="navbar-title" class="navbar-title">City Youth Development Office</div>
+                        <div class="navbar-subtitle">Santa Rosa City</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: white;">
+                    <span class="bi bi-list" style="color: white;"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="dropdown-item" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="dropdown-item" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="dropdown-item" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                News
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="dropdown-item" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                YORP
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="dropdown-item" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                                <li><a class="dropdown-item" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="dropdown-item" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light ms-2" href="#">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Side Bar with Accordion Changes -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#aboutCollapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> About
+                        </a>
+                        <div class="collapse" id="aboutCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="nav-link text-dark" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> News
+                        </a>
+                        <div class="collapse" id="newsCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="nav-link text-dark" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#yorpCollapse" role="button" aria-expanded="false" aria-controls="yorpCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> YORP
+                        </a>
+                        <div class="collapse" id="yorpCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="nav-link text-dark" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="nav-link text-dark" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#othersCollapse" role="button" aria-expanded="false" aria-controls="othersCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> Others
+                        </a>
+                        <div class="collapse" id="othersCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="awards.html">Awards</a></li>
+                                <li><a class="nav-link text-dark" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="nav-link text-dark" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mt-2" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!---------------------------- ^ DON'T REMOVE ^ ------------------------------>
+
+    <!-- PUT SOME STUFF HERE -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div id="state" class="col-md-4 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <div class="collapse-btn" onclick="toggleSidebar()">☰</div> <!-- Clickable area to collapse -->
+                    <ul class="nav flex-column" id="state-nav" style="max-width: 200px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1" title="State Leader Youth Federation" data-abbrev="SLYFㅤㅤㅤ">State Leader Youth Federation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2" title="Singko Boleros" data-abbrev="SINGKOㅤㅤ">Singko Boleros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3" title="Rotaract Club of Sta. Rosa Centro" data-abbrev="RCSCㅤㅤ">Rotaract Club of Sta. Rosa Centro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4" title="Pwersa ng Kabataan" data-abbrev="PWERSAㅤㅤ">Pwersa ng Kabataan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5" title="Project Sinag" data-abbrev="SINAGㅤㅤ">Project Sinag</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section6" title="PCMI Youth" data-abbrev="PCMIㅤㅤ">PCMI Youth</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section7" title="Market Area Youth Organization" data-abbrev="MAYOㅤㅤ">Market Area Youth Organization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section8" title="Macabling Youth Organization" data-abbrev="MYOㅤㅤ">Macabling Youth Organization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section9" title="Kristiyanong Kabataan Para sa Bayan" data-abbrev="KKBㅤㅤㅤ">Kristiyanong Kabataan Para sa Bayan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section10" title="Kabataan sa Kartilya ng Katipunan" data-abbrev="KSKKㅤㅤ">Kabataan sa Kartilya ng Katipunan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section11" title="Kalinga Avilo" data-abbrev="AVILOㅤㅤ">Kalinga Avilo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section12" title="Changing Lives in Every Shot" data-abbrev="CLESㅤㅤ">Changing Lives in Every Shot</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section13" title="Brilliance relative to Youth and Their Healthy Mind" data-abbrev="BRYTHMㅤㅤ">Brilliance relative to Youth and Their Healthy Mind</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section14" title="Asiatech Supreme Student Council" data-abbrev="ASSCㅤㅤ">Asiatech Supreme Student Council</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section15" title="Libertas Debate Society" data-abbrev="LIBERTASㅤㅤ">Libertas Debate Society</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                function toggleSidebar() {
+                  var sidebar = document.getElementById('state');
+                  sidebar.classList.toggle('collapsed');
+                }
+            </script>
+
+            <!-- ADD HERE -->
+            <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4">
+                <div class="yo-leaders border rounded p-3 text-center">
+                    <img src="9-9 YO PICS/SLYF.webp" class="img-fluid mb-3 pop-in" alt="...">
+                    <h1 class="mt-3 pop-in">STATE LEADER YOUTH FEDERATION</h1>
+                    <h6 class="pop-in">2023 - 2024</h6>
+                    <p class="lead pop-in">This is a sample paragraph that goes below the title and describes the content in more detail.</p>
+                    <a href="#" class="btn btn-primary apply-btn pop-in" data-bs-toggle="modal" data-bs-target="#applyNowModal">Apply Now</a>
+                </div>
+            </main>
+
+            <div class="container mt-3 slide-in">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="yo-leaders card card-youth-org text-center mb-3">
+                            <div class="yo-leaders card-header">
+                                Featured
+                            </div>
+                            <div class="yo-leaders image-container-youth-org" style="height: 200px; width: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                                <img src="9-9 YO PICS/asiactech.webp" class="card-img-top img-fluid" alt="PCMI Youth">
+                            </div>
+                            <div class="yo-leaders card-body card-body-youth-org">
+                                <h5 class="card-title card-title-youth-org">Special title treatment</h5>
+                                <p class="card-text card-text-youth-org">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary btn-primary-youth-org">Go somewhere</a>
+                            </div>
+                            <div class="yo-leaders card-footer text-body-secondary">
+                                2 days ago
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="yo-leaders card card-youth-org text-center mb-3">
+                            <div class="yo-leaders card-header">
+                                Featured
+                            </div>
+                            <div class="yo-leaders image-container-youth-org" style="height: 200px; width: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                                <img src="9-9 YO PICS/brythmn.webp" class="card-img-top img-fluid" alt="Image 2">
+                            </div>
+                            <div class="yo-leaders card-body card-body-youth-org">
+                                <h5 class="card-title card-title-youth-org">Special title treatment</h5>
+                                <p class="card-text card-text-youth-org">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary btn-primary-youth-org">Go somewhere</a>
+                            </div>
+                            <div class="yo-leaders card-footer text-body-secondary">
+                                2 days ago
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <div class="yo-leaders card card-youth-org text-center mb-3">
+                            <div class="yo-leaders card-header">
+                                Featured
+                            </div>
+                            <div class="yo-leaders image-container-youth-org" style="height: 200px; width: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                                <img src="9-9 YO PICS/cles.webp" class="card-img-top img-fluid" alt="Image 3" style="max-width: 100%; max-height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="yo-leaders card-body card-body-youth-org">
+                                <h5 class="card-title card-title-youth-org">Special title treatment</h5>
+                                <p class="card-text card-text-youth-org">With supporting text below as a natural lead-in to additional content.</p>
+                                <a href="#" class="btn btn-primary btn-primary-youth-org">Go somewhere</a>
+                            </div>
+                            <div class="yo-leaders card-footer text-body-secondary">
+                                2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apply Now Modal -->
+            <div class="modal fade" id="applyNowModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="applyNowModalLabel" aria-auto="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="applyNowModalLabel">Apply Now</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="applyNowForm">
+                                <div class="form-group">
+                                    <label for="inputName" class="form-label">Name</label>
+                                    <input type="text" id="inputName" class="form-control" aria-describedby="name" maxlength="255">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAge" class="form-label">Age</label>
+                                    <input type="number" id="inputAge" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputContactNumber" class="form-label">Contact Number</label>
+                                    <input type="tel" id="inputContactNumber" class="form-control" aria-describedby="contactNumber" pattern="^\d{11}$">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputFacebookName" class="form-label">Facebook Name</label>
+                                    <input type="text" id="inputFacebookName" class="form-control" aria-describedby="facebookName" maxlength="255">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="submitForm('applyNowForm')">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Scroll to Top Button-->
+    <a href='#' class="stt" title="scroll to top"></a>
+    <div id="top"></div>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-black mt-5" style="background-color: #EFEFEF;">
+        <div class="container p-4 pb-0">
+            <section class="d-flex justify-content-between align-items-start flex-wrap">
+                <!-- Logo -->
+                <div class="col-12 col-md-auto mb-3 text-center text-md-start">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="img-fluid" style="max-height: 150px;">
+                </div>
+  
+                <!-- Company Info -->
+                <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-start">
+                    <h6 class="mb-4 font-weight-bold">
+                        <b style="color:#A21303">City Youth Development Office</b><br>
+                        <b>Santa Rosa City</b>
+                    </h6>
+                    <p><strong>Location:</strong><br>
+                        <a href="https://www.google.com/maps/dir//14.3117828,121.10502/@14.3110402,121.0964316,15.4z?entry=ttu" target="_blank" class="text-decoration-none location-link" style="color: inherit;">
+                            Santa Rosa Multi-Purpose Complex Main Lobby, Santa Rosa, Philippines.
+                        </a>
+                    </p>
+                    <p><strong>Working Hours:</strong><br>Weekdays <br>08:00am - 05:00pm</p>
+                </div>
+  
+                <!-- Divider -->
+                <div class="d-none d-md-block mx-3" style="border-left: 4px solid black; height: 250px;"></div>
+  
+                <!-- Page Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Page Links</h6>
+                    <p><a href="home.html" class="text-decoration-none page-link" style="color: #A21303;">Home</a></p>
+                    <p><a href="about-cydo.html" class="text-decoration-none page-link" style="color: #A21303;">About</a></p>
+                    <p><a href="latest-news-updates.html" class="text-decoration-none page-link" style="color: #A21303;">News</a></p>
+                    <p><a href="what-is-yorp.html" class="text-decoration-none page-link" style="color: #A21303;">YORP</a></p>
+                    <p><a href="contacts.html" class="text-decoration-none page-link" style="color: #A21303;">Contacts</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Quick Links</h6>
+                    <p><a href="https://nyc.gov.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC</a></p>
+                    <p><a href="https://nyc-sk.com/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC SK</a></p>
+                    <p><a href="https://yorpnyc.org.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC YORP</a></p>
+                </div>
+
+                <!-- More -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">More</h6>
+                    <p><a href="SRCYDO Legalities/faqs.html" class="text-decoration-none page-link" style="color: #A21303;">FAQS</a></p>
+                    <p><a href="SRCYDO Legalities/privacy-policy.html" class="text-decoration-none page-link" style="color: #A21303;">Privacy Policy</a></p>
+                    <p><a href="SRCYDO Legalities/terms-and-condition.html" class="text-decoration-none page-link" style="color: #A21303;">Terms and Condition</a></p>
+                    <p><a href="SRCYDO Legalities/disclaimer.html" class="text-decoration-none page-link" style="color: #A21303;">Disclaimer</a></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #9E0C0C; color: white;">
+            © Santa Rosa City Youth Development Office | All Rights Reserved
+        </div>
+    </footer>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function onScroll() {
+    const elements = document.querySelectorAll('.slide-in, .slide-right-to-left, .pop-in');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    
+    elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + scrollTop;
+      
+      if (scrollTop + windowHeight > elementTop + (element.offsetHeight / 4)) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
+</script>
+
+<script>
+    function updateNavbarTitle() {
+        var navbarTitle = document.getElementById("navbar-title");
+        if (window.innerWidth <= 524) {
+            navbarTitle.textContent = "CYDO";
+        } else {
+            navbarTitle.textContent = "City Youth Development Office";
+        }
+    }
+
+    // Call the function initially
+    updateNavbarTitle();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateNavbarTitle);
+</script>
+</body>
+
+</html>

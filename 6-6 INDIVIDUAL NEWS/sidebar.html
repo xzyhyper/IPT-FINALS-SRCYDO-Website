@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        /* MAIN CONTENTS OF LATEST NEWS UPDATES */
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: Montserrat;
+}
+
+.card {
+    max-height:100%;
+    width: auto;
+}
+.card-img {
+    width: auto;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.vh-100 {
+    padding: 20px;
+}
+
+.shadow-lg-custom {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The container to stretch and align its content */
+.col-md-4.d-flex {
+    display: flex;
+    align-items: stretch;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.pagination .page-link {
+    color: #9E0C0C;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #9E0C0C;
+    border-color: #9E0C0C;
+    color: white;
+}
+.pagination .page-link:hover {
+    color: #750909;
+}
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(158, 12, 12, 0.25);
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: inherit;
+}
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-overlay p {
+    margin: 0;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.pop-out {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.pop-out.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image-container img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Slide from left to right */
+.slide-left-to-right {
+    transform: translateX(-100%);
+}
+
+.slide-left-to-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Pop-in by zooming in */
+.pop-in {
+    transform: scale(0.5);
+}
+
+.pop-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Slide from right to left */
+.slide-right-to-left {
+    transform: translateX(100%);
+}
+
+.slide-right-to-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*For new latest update navbar vertical*/
+ .list-group-item {
+    padding: 0;
+    border: none;
+}
+
+.custom-link {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    color: inherit;
+}
+
+.custom-link:hover {
+    background-color: #9E0C0C;
+    color: white;
+}
+
+/* Optional: Add a smooth transition for the hover effect */
+.custom-link {
+    transition: background-color 0.3s, color 0.3s;
+}
+.col-width {
+    width: 15rem;
+}
+
+.first-card {
+    border-radius: 15px 0px 0px 0px; 
+    max-height: 300px; 
+    overflow-y: auto;
+}
+
+ .second-card {
+    border-radius: 0px 15px 15px 15px;
+}
+
+.card-header {
+    background-color: #9E0C0C; 
+    border-radius: 15px 0px 0px 0px;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+    .slide-left-to-right, .slide-right-to-left {
+        transform: translateX(0);
+    }
+
+    .slide-left-to-right.visible, .slide-right-to-left.visible {
+        transform: translateX(0);
+    }
+
+    .pop-in {
+        transform: scale(1);
+    }
+
+    .pop-in.visible {
+        transform: scale(1);
+    }
+}
+
+/*Responsiveness for latest update navbar vertical*/
+@media (max-width: 767px) {
+    .col-width {
+       width: 40rem;
+    }
+    .card-header {
+       border-radius: 15px 15px 0px 0px;
+    }
+    .first-card {
+        min-width: 15rem;
+        border-radius: 15px 15px 15px 15px;
+        margin-bottom: 20px;
+    }
+
+    .second-card {
+        border-radius: 15px 15px 15px 15px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- SMALL SIDEBAR NAVIGATION -->
+    <div class="container mt-4">
+        <div class="row justify-content-center gx-0">
+            <!-- First Card -->
+            <div class="col-lg-4 col-md-6 col-width">
+                <div class="card first-card text-center border-dark pop-out">
+                    <div class="card-header text-white">
+                        CYDO Latest Updates
+                    </div>
+                    <div class="card-body p-0 text-start">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item p-0">
+                                <a href="/6-6 INDIVIDUAL NEWS/workshop-update.html" class="fs-6 custom-link">Dance Workshop</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Laguna Day 2024.html" class="fs-6 custom-link">Laguna Day</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Eid'l Adha 2024.html" class="fs-6 custom-link">Eid'l Adha</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Father's Day 2024.html" class="fs-6 custom-link">Father's Day</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/6-6 INDIVIDUAL NEWS/ongoing-sanguniang-kabataan.html" class="fs-6 custom-link">Ongoing SK</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Event1.html" class="fs-6 custom-link">Event 1</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Event2.html" class="fs-6 custom-link">Event 2</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Event3.html" class="fs-6 custom-link">Event 3</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Event4.html" class="fs-6 custom-link">Event 4</a>
+                            </li>
+                            <li class="list-group-item p-0">
+                                <a href="/Event5.html" class="fs-6 custom-link">Event 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

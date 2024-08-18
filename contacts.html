@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts | SRCYDO Website</title>
+    <link rel="icon" type="image/x-icon" href="SRCYDO MAIN IMAGES/SRCYDO Logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Navbar */
+.navbar-custom {
+    background-color: #9e0c0c;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-subtitle {
+    font-size: 0.875rem;
+}
+
+.navbar-nav .btn {
+    margin-right: 30px;
+    border-radius: 20px; 
+    font-weight: bold;   
+    padding: 10px 20px;  
+    background-color: #f8f9fa; 
+    color: #9e0c0c;
+    border: 2px solid #9e0c0c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .btn:hover {
+    background-color: #3a1414; 
+    color: #f8f9fa;
+}
+
+.navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+
+/* Hover Effect for Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2e6ea;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Footer */
+.footer-links p {
+    margin-bottom: 8px; 
+}
+.footer-links a.page-link:hover {
+    text-decoration: underline !important;
+}
+.footer-links a:hover,
+    .location-link:hover {
+        text-decoration: underline !important;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Back to Top Button */
+.stt{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(223, 255, 128) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    box-shadow: 0 0.25rem 0.5rem 0 gray;
+    opacity: 0.6;
+    scroll-behavior: smooth;
+}
+.stt:hover{
+    opacity: 0.9;
+}
+.stt:focus{
+    opacity: 0.9;
+}
+.stt:active{
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/* MAIN CONTENTS OF CONTACTS */
+.content {
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.page-header {
+  background-image: url('/14-14 CONTACTS PICS/contacts-header1.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+.section-title {
+    color: #D31D1D;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.location-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.iframe-container {
+    display: flex;
+    justify-content: center;
+}
+.iframe-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border: 5px solid #640F0F; 
+}
+.custom-hr {
+    border: 0;
+    height: 8px;
+    background-color: #750d0d;
+    margin: 20px auto; 
+    width: 60%; 
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.contact-info {
+    text-align: center;
+    margin-top: 20px;
+}
+.contact-info h3 {
+    font-size: 1.8rem; 
+    color: black; 
+    font-weight: bold; 
+}
+.contact-info p {
+    font-size: 1.5rem; 
+    margin-bottom: 5px;
+}
+
+.socials-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.socials-container {
+    margin-top: 20px;
+}
+
+.socials-column {
+    text-align: center;
+}
+
+.socials-column p {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.socials-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.socials-icons a {
+    margin: 0 10px;
+}
+
+.socials-icons svg {
+    width: 40px; 
+    height: auto;
+}
+
+    
+.emergency-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF0000;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.emergency-container {
+    background-color: #D9D9D9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.emergency-logo {
+    max-width: 150px;
+    height: auto;
+    margin: 0 15px 15px 0;
+}
+
+.emergency-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.emergency-info {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+}
+
+.emergency-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-link {
+    margin-right: 25px;
+}
+
+.icon-link svg {
+    max-width: 40px;
+    height: auto;
+}
+
+.icon-link:last-child {
+    margin-right: 0;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-right-to-left {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-right-to-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+    </style>
+</head>
+
+<body>
+    <!---------------------------- = DON'T REMOVE = ------------------------------>
+    <!---------------------------- = NAVBAR = ------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white d-flex align-items-center" href="home.html">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="logo me-2">
+                    <div class="text-start">
+                        <div id="navbar-title" class="navbar-title">City Youth Development Office</div>
+                        <div class="navbar-subtitle">Santa Rosa City</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: white;">
+                    <span class="bi bi-list" style="color: white;"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="dropdown-item" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="dropdown-item" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="dropdown-item" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                News
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="dropdown-item" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                YORP
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="dropdown-item" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                                <li><a class="dropdown-item" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="dropdown-item" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light ms-2" href="#">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Side Bar with Accordion Changes -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#aboutCollapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> About
+                        </a>
+                        <div class="collapse" id="aboutCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="nav-link text-dark" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> News
+                        </a>
+                        <div class="collapse" id="newsCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="nav-link text-dark" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#yorpCollapse" role="button" aria-expanded="false" aria-controls="yorpCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> YORP
+                        </a>
+                        <div class="collapse" id="yorpCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="nav-link text-dark" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="nav-link text-dark" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#othersCollapse" role="button" aria-expanded="false" aria-controls="othersCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> Others
+                        </a>
+                        <div class="collapse" id="othersCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="awards.html">Awards</a></li>
+                                <li><a class="nav-link text-dark" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="nav-link text-dark" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mt-2" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!---------------------------- ^ DON'T REMOVE ^ ------------------------------>
+
+    <!-- PUT SOME STUFF HERE -->
+    <div class="container-fluid page-header mb-4 p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 content">
+                    <h1><b>Contacts</b></h1>
+                    <p>Provides essential information for reaching out to our team, ensuring seamless communication and support for all inquiries and needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="section-title pop-in">Where to Find Us?</h2>
+            </div>
+            <div class="col-12 location-text pop-in">
+                <p>Santa Rosa Multi-Purpose Complex Main Lobby, Santa Rosa, Philippines</p>
+            </div>
+            <div class="col-12 iframe-container pop-in">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1769.3959354321482!2d121.10488869003802!3d14.311915542449062!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d9b7a41f7fcb%3A0x1845af82e326c5c6!2sCity%20of%20Santa%20Rosa%20Multi-Purpose%20Complex!5e1!3m2!1sen!2sph!4v1719565546063!5m2!1sen!2sph" 
+                    width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <hr class="custom-hr">
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <img src="14-14 CONTACTS PICS/SRC Logo.webp" alt="Logo 1" class="logo-img slide-in">
+          </div>
+          <div class="col">
+            <div class="contact-info pop-in">
+              <h3>CONTACT NUMBERS</h3>
+              <p><b>SRCYDO:</b> 0991-416-0210</p>
+              <p><b>SRC Gov:</b> (049) 530 0015</p>
+            </div>
+          </div>
+          <div class="col">
+            <img src="14-14 CONTACTS PICS/SRCYDO Logo.webp" alt="Logo 2" class="logo-img slide-right-to-left">
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <h3 class="socials-title pop-in">Socials</h3>
+        </div>
+    </div>
+  
+    <div class="row socials-container">
+        <div class="col-lg-6 socials-column pop-in">
+            <p><strong>Santa Rosa City Government FB & Website:</strong></p>
+            <div class="socials-icons">
+                <a href="https://www.facebook.com/santarosacitygovernment" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="45" width="45" viewBox="0 0 448 512">
+                        <path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                </a>
+                <a href="https://santarosacity.gov.ph/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="45" width="45" viewBox="0 0 640 512">
+                        <path fill="#a91515" d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 socials-column pop-in">
+            <p><strong>City Youth Development Office FB & Email:</strong></p>
+            <div class="socials-icons">
+                <a href="https://www.facebook.com/santarosa.CYDO" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="45" width="45" viewBox="0 0 448 512">
+                        <path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+                    </svg>
+                </a>
+                <a href="mailto:cydosantarosa@gmail.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="45" width="45" viewBox="0 0 512 512">
+                        <path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>    
+
+    <div class="container">
+        <div style="border-bottom: 5px solid #9E0C0C; padding-top: 20px;"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+          <h2 class="emergency-title pop-in">EMERGENCY HOTLINES</h2>
+        </div>
+    </div>
+
+    <!-- PNP -->
+    <div class="container my-4 slide-in">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/PNP Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>Santa Rosa City Police Station</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        09055505288<br>
+                        +63 (49) 8376501</p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/g1AMEh1ruureMYkd8" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61555465913841" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BFP -->
+    <div class="container my-4 slide-right-to-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/BFP Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>BFP R4A Santa Rosa City FS</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        (049)5341291<br></p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/Ew8xuvwaWSjaEjpYA" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/bfpstarosalagunafs" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                            <a href="mailto:starosalagunabfp@yahoo.com" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 512 512"><path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CDRRMO -->
+    <div class="container my-4 slide-in">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/CDRRMO Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>City Disaster Risk Reduction and Management Office</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        09956501943<br>
+                        09998735431</p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/EZC1AHMD3jzgzZ799" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/santarosalaguna.cdrrmo" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                            <a href="mailto:cdrrmo.santarosa@gmail.com" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 512 512"><path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RED CROSS -->
+    <div class="container my-4 slide-right-to-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/Red Cross Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>Philippine Red Cross Laguna Chapter - City of Santa Rosa Branch</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        (049) 5454531<br>
+                        09175114909<br>
+                        09175124909<br>
+                        09173244909</p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/SvEqx2avN71hcKRn6" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/redcross143santarosa" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                            <a href="mailto:laguna.santarosa@redcross.org.ph" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 512 512"><path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                            </a>
+                            <a href="https://redcross.org.ph/" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 640 512"><path fill="#a91515" d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SRCH -->
+    <div class="container my-4 slide-in">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/SCH Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>Santa Rosa Community Hospital</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        09506668525<br>
+                        0495339098<br>
+                        0495344571<br>
+                        0495344572</p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/jA3SCNRYGoJBY5vb7" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/santarosa.SRCH" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                            <a href="mailto:srcityhospital1995@gmail.com" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 512 512"><path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                            </a>
+                            <a href="https://forms.zohopublic.com/santarosacityhospital/form/SRCHPhilHealtheKonsultaOnlineFormforOPDPatients/formperma/rcIkZSMkviebfLqxtU5lJf9Hj2KvFxMLURJijxaSHdo?fbclid=IwZXh0bgNhZW0CMTAAAR2sRNg5qzybRZ5OIQMgVTIuv3M7umi-6gmPzBxDpMir8iUMTBttb3Ju0Kg_aem_ATYdZ8SskEiKeA1P8hZKUpNkEWXqWJ-eC7xcnW1vt3qhSv-9S_rN5MhDGBxh7FNRtz2fizQgEhFi5XW3dr8a4h9i" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 640 512"><path fill="#a91515" d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6 0 403.2C0 445.6 34.4 480 76.8 480H563.2c42.4 0 76.8-34.4 76.8-76.8c0-10.6-8.6-19.2-19.2-19.2H19.2z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- USRH -->
+    <div class="container my-4 slide-right-to-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="emergency-container d-flex flex-column flex-md-row align-items-start">
+                    <img src="14-14 CONTACTS PICS/UniHealth Logo 1.png" alt="Emergency Logo" class="emergency-logo">
+                    <div class="emergency-content">
+                        <h3>UniHealth Sta. Rosa and Medical Center, Inc.</h3>
+                        <p class="emergency-info"><b>Number:</b><br>
+                        09178252335</p>
+                        <p class="emergency-info"><b>Social & Directions:</b></p>
+                        <div class="emergency-icons">
+                            <a href="https://maps.app.goo.gl/GXhMo8S5ha8iQUwL7" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 384 512"><path fill="#a91515" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </a>
+                            <a href="https://www.facebook.com/unihealthstarosa" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 448 512"><path fill="#a91515" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+                            </a>
+                            <a href="mailto:srhmcmarketing08@gmail.com" target="_blank" class="icon-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35" width="35" viewBox="0 0 512 512"><path fill="#a91515" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <hr class="custom-hr">
+    </div>
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Scroll to Top Button-->
+    <a href='#' class="stt" title="scroll to top"></a>
+    <div id="top"></div>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-black mt-5" style="background-color: #EFEFEF;">
+        <div class="container p-4 pb-0">
+            <section class="d-flex justify-content-between align-items-start flex-wrap">
+                <!-- Logo -->
+                <div class="col-12 col-md-auto mb-3 text-center text-md-start">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="img-fluid" style="max-height: 150px;">
+                </div>
+  
+                <!-- Company Info -->
+                <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-start">
+                    <h6 class="mb-4 font-weight-bold">
+                        <b style="color:#A21303">City Youth Development Office</b><br>
+                        <b>Santa Rosa City</b>
+                    </h6>
+                    <p><strong>Location:</strong><br>
+                        <a href="https://www.google.com/maps/dir//14.3117828,121.10502/@14.3110402,121.0964316,15.4z?entry=ttu" target="_blank" class="text-decoration-none location-link" style="color: inherit;">
+                            Santa Rosa Multi-Purpose Complex Main Lobby, Santa Rosa, Philippines.
+                        </a>
+                    </p>
+                    <p><strong>Working Hours:</strong><br>Weekdays <br>08:00am - 05:00pm</p>
+                </div>
+  
+                <!-- Divider -->
+                <div class="d-none d-md-block mx-3" style="border-left: 4px solid black; height: 250px;"></div>
+  
+                <!-- Page Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Page Links</h6>
+                    <p><a href="home.html" class="text-decoration-none page-link" style="color: #A21303;">Home</a></p>
+                    <p><a href="about-cydo.html" class="text-decoration-none page-link" style="color: #A21303;">About</a></p>
+                    <p><a href="latest-news-updates.html" class="text-decoration-none page-link" style="color: #A21303;">News</a></p>
+                    <p><a href="what-is-yorp.html" class="text-decoration-none page-link" style="color: #A21303;">YORP</a></p>
+                    <p><a href="contacts.html" class="text-decoration-none page-link" style="color: #A21303;">Contacts</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Quick Links</h6>
+                    <p><a href="https://nyc.gov.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC</a></p>
+                    <p><a href="https://nyc-sk.com/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC SK</a></p>
+                    <p><a href="https://yorpnyc.org.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC YORP</a></p>
+                </div>
+
+                <!-- More -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">More</h6>
+                    <p><a href="SRCYDO Legalities/faqs.html" class="text-decoration-none page-link" style="color: #A21303;">FAQS</a></p>
+                    <p><a href="SRCYDO Legalities/privacy-policy.html" class="text-decoration-none page-link" style="color: #A21303;">Privacy Policy</a></p>
+                    <p><a href="SRCYDO Legalities/terms-and-condition.html" class="text-decoration-none page-link" style="color: #A21303;">Terms and Condition</a></p>
+                    <p><a href="SRCYDO Legalities/disclaimer.html" class="text-decoration-none page-link" style="color: #A21303;">Disclaimer</a></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #9E0C0C; color: white;">
+            © Santa Rosa City Youth Development Office | All Rights Reserved
+        </div>
+    </footer>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function onScroll() {
+    const elements = document.querySelectorAll('.slide-in, .slide-right-to-left, .pop-in');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    
+    elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + scrollTop;
+      
+      if (scrollTop + windowHeight > elementTop + (element.offsetHeight / 4)) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
+</script>
+
+<script>
+    function updateNavbarTitle() {
+        var navbarTitle = document.getElementById("navbar-title");
+        if (window.innerWidth <= 524) {
+            navbarTitle.textContent = "CYDO";
+        } else {
+            navbarTitle.textContent = "City Youth Development Office";
+        }
+    }
+
+    // Call the function initially
+    updateNavbarTitle();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateNavbarTitle);
+</script>
+</body>
+
+</html>

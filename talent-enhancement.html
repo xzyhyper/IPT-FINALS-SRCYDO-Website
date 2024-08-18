@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Enhancement | SRCYDO Website</title>
+    <link rel="icon" type="image/x-icon" href="SRCYDO MAIN IMAGES/SRCYDO Logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Navbar */
+.navbar-custom {
+    background-color: #9e0c0c;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-subtitle {
+    font-size: 0.875rem;
+}
+
+.navbar-nav .btn {
+    margin-right: 30px;
+    border-radius: 20px; 
+    font-weight: bold;   
+    padding: 10px 20px;  
+    background-color: #f8f9fa; 
+    color: #9e0c0c;
+    border: 2px solid #9e0c0c;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav .btn:hover {
+    background-color: #3a1414; 
+    color: #f8f9fa;
+}
+
+.navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+
+/* Hover Effect for Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2e6ea;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Footer */
+.footer-links p {
+    margin-bottom: 8px; 
+}
+.footer-links a.page-link:hover {
+    text-decoration: underline !important;
+}
+.footer-links a:hover,
+    .location-link:hover {
+        text-decoration: underline !important;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Back to Top Button */
+.stt{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(223, 255, 128) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    box-shadow: 0 0.25rem 0.5rem 0 gray;
+    opacity: 0.6;
+    scroll-behavior: smooth;
+}
+.stt:hover{
+    opacity: 0.9;
+}
+.stt:focus{
+    opacity: 0.9;
+}
+.stt:active{
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/* MAIN CONTENTS OF TALENT ENHANCEMENT */
+.content {
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.page-header {
+  background-image: url('/13-13 TALENT ENHANCEMENT PICS/talent-enhancement-header1.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+.title-color {
+    color: #B22222;
+}
+
+.workshop-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.workshop-description {
+    font-size: 17px;
+    text-align: justify;
+}
+
+.workshop-image {
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 970px) {
+    .image-top-margin {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 980px) {
+    .content-margin {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 40px;
+    }
+}
+
+h4.card-text.text-center {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.TE-divider {
+    border-top: 10px solid rgb(122, 9, 9);
+}
+
+.btn-primary {
+    background-color: #71000d;
+    border-color: #71000d;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+    border-color: #720110;
+    color: #71000d;
+}
+
+.required::after {
+    content: "*";
+    color: #720110;
+}
+
+.sub-heading {
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-right-to-left {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-right-to-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+    .float-md-start, .float-md-end {
+        float: none !important;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!---------------------------- = DON'T REMOVE = ------------------------------>
+    <!---------------------------- = NAVBAR = ------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white d-flex align-items-center" href="home.html">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="logo me-2">
+                    <div class="text-start">
+                        <div id="navbar-title" class="navbar-title">City Youth Development Office</div>
+                        <div class="navbar-subtitle">Santa Rosa City</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: white;">
+                    <span class="bi bi-list" style="color: white;"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="dropdown-item" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="dropdown-item" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="dropdown-item" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                News
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="dropdown-item" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                YORP
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="dropdown-item" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                                <li><a class="dropdown-item" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="dropdown-item" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light ms-2" href="#">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Side Bar with Accordion Changes -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#aboutCollapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> About
+                        </a>
+                        <div class="collapse" id="aboutCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="nav-link text-dark" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> News
+                        </a>
+                        <div class="collapse" id="newsCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="nav-link text-dark" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#yorpCollapse" role="button" aria-expanded="false" aria-controls="yorpCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> YORP
+                        </a>
+                        <div class="collapse" id="yorpCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="nav-link text-dark" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="nav-link text-dark" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#othersCollapse" role="button" aria-expanded="false" aria-controls="othersCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> Others
+                        </a>
+                        <div class="collapse" id="othersCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="awards.html">Awards</a></li>
+                                <li><a class="nav-link text-dark" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="nav-link text-dark" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mt-2" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!---------------------------- ^ DON'T REMOVE ^ ------------------------------>
+
+    <!-- PUT SOME STUFF HERE -->
+    <div class="container-fluid page-header mb-4 p-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 content">
+                    <h1><b>Talent Enhancement</b></h1>
+                    <p>Offers comprehensive Talent Enhancement programs designed to nurture and cultivate the unique skills and potential of every young individual in our community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <p class="sub-heading pop-in">Welcome to Talent Enhancement Workshop of CYDO Santa Rosa</p>
+    </div>
+
+    <div class="container-sm mt-3">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="13-13 TALENT ENHANCEMENT PICS/talent rehersal.webp" 
+                     class="img-fluid rounded thumbnail image-top-margin slide-in"
+                     alt="Talent Enhancement Workshop"
+                     style="max-width: 70%; height: auto;">
+            </div>
+            <div class="col-md-12 content-margin">
+                <div class="container pop-in">
+                    <div class="mt-4 text-center" style="font-size: 18px; font-weight: bold;">
+                        <span style="color: #B22222;">Talent Enhancement</span> Showcase
+                    </div>
+                    <p class="text-center" style="font-size: 14px; padding-top: 5px;">
+                        Every twice a year, the Santa Rosa City Youth Development Office (CYDO) organizes a Talent Enhancement Workshop Showcase, highlighting the diverse talents of the city's youth. This event features performances in singing, dancing, guitar, and keyboard, providing a platform for young individuals to showcase their skills and creativity. The workshop not only celebrates the artistic abilities of Santa Rosa's youth but also encourages their personal growth and development through the arts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 4 IMAGES SECTIONS -->
+    <div class="container">
+        <div class="clearfix">
+            <img src="13-13 TALENT ENHANCEMENT PICS/singerist.webp" class="float-md-start mb-3 me-md-3 workshop-image" alt="Singing Workshop" style="max-width: 100%; height: auto; width: 400px;">
+            <div class="text-center text-md-start" style="position: relative; top: 20px;"> <!-- Added position relative and top -->
+                <div class="workshop-title pop-in" style="font-size: 18px;">
+                    <span class="title-color">Singing</span> Workshop
+                </div>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    The <span class="title-color"><b>Singing Workshop</b></span> organized by the Santa Rosa City Youth Development Office (CYDO) provides expert training in vocal techniques and performance skills for young singers. Participants receive personalized coaching and engage in interactive sessions to develop confidence and proficiency in singing, promoting musical growth and artistic expression.
+                </p>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    Discover the power of your voice in our Singing Workshop, where you'll learn vocal techniques and performance skills in a supportive environment. Whether you're a beginner or seasoned singer, this is your chance to shine and connect with fellow music enthusiasts.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container content-custom">
+        <div class="clearfix">
+            <img src="13-13 TALENT ENHANCEMENT PICS/guitar.webp" alt="Guitar Workshop" class="float-md-end mb-3 ms-md-3 workshop-image" style="max-width: 100%; height: auto; width: 400px;">
+            <div class="text-center text-md-start" style="position: relative; top: 20px;"> <!-- Added position relative and top -->
+                <div class="workshop-title pop-in" style="font-size: 18px;">
+                    <span class="title-color">Guitar</span> Workshop
+                </div>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    The <span class="title-color"><b>Guitar Workshop</b></span> hosted by the Santa Rosa City Youth Development Office (CYDO) provides specialized training in guitar techniques and musical performance. Participants benefit from personalized coaching and interactive sessions, enhancing their skills and confidence in playing the guitar.
+                </p>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    Grab your guitar and join us for the Guitar Workshop, where you'll learn to strum, pick, and play your favorite songs. From basic chords to advanced techniques, this workshop is perfect for anyone looking to improve their guitar skills and jam with others.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container content-custom">
+        <div class="clearfix">
+            <img src="13-13 TALENT ENHANCEMENT PICS/damceee(1).webp" alt="Dance Workshop" class="float-md-start mb-3 me-md-3 workshop-image" style="max-width: 100%; height: auto; width: 400px;">
+            <div class="text-center text-md-start" style="position: relative; top: 20px;"> <!-- Added position relative and top -->
+                <div class="workshop-title pop-in" style="font-size: 18px;">
+                    <span class="title-color">Dance</span> Workshop
+                </div>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    The <span class="title-color"><b>Dance Workshop</b></span> organized by the Santa Rosa City Youth Development Office (CYDO) offers specialized training in dance techniques and performance. Participants engage in personalized coaching sessions and interactive classes, enhancing their skills and confidence in various dance styles.
+                </p>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    Get ready to move and groove in our Dance Workshop, where you'll learn fun routines and express yourself through dance. Whether you’re into hip-hop, contemporary, or any other style, this workshop offers a dynamic space to explore your passion for dance.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="clearfix">
+            <img src="13-13 TALENT ENHANCEMENT PICS/keyboard(1).webp" class="float-md-end mb-3 ms-md-3 workshop-image" alt="Keyboard Workshop" style="max-width: 100%; height: auto; width: 400px;">
+            <div class="text-center text-md-start" style="position: relative; top: 20px;"> <!-- Added position relative and top -->
+                <div class="workshop-title pop-in" style="font-size: 18px;">
+                    <span class="title-color">Keyboard</span> Workshop
+                </div>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    The <span class="title-color"><b>Keyboard Workshop</b></span> conducted by the Santa Rosa City Youth Development Office (CYDO) focuses on developing proficiency in keyboard playing and musical expression. Through hands-on training and personalized instruction, participants learn essential techniques and explore diverse musical genres.
+                </p>
+                <p class="workshop-description pop-in" style="font-size: 14px;">
+                    Unlock your musical potential in the Keyboard Workshop, where you'll dive into the world of melodies and harmonies. With guidance from skilled instructors, you’ll learn to play the keyboard and create beautiful music in a collaborative setting.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-sm">
+        <div class="row my-5">
+            <div class="col-md-12 TE-divider"></div>
+        </div>
+    </div>
+
+    <!-- New Card -->
+    <div class="container mb-5">
+        <h1 class="text-center pop-in" style="font-size: 25px;"><b>CYDO Programs</b></h1>
+        <h4 class="card-text text-center mb-4 pop-in" style="font-size: 18px;">Choose only one program that you like.</h4>
+    
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card slide-in mb-5">
+                        <img src="13-13 TALENT ENHANCEMENT PICS/DANCEM.webp" class="card-img-top card-img-fixed" alt="Dancing">
+                        <div class="card-body">
+                            <h5 class="card-title">Dancing</h5>
+                            <p class="card-text">Join and discover the joy of movement and rhythm.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dancingModal">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card slide-in mb-5">
+                        <img src="13-13 TALENT ENHANCEMENT PICS/SINGINGM.webp" class="card-img-top card-img-fixed" alt="Singing">
+                        <div class="card-body">
+                            <h5 class="card-title">Singing Lesson</h5>
+                            <p class="card-text">Unlock your vocal potential with our singing lessons.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#singingModal">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card slide-in mb-5">
+                        <img src="13-13 TALENT ENHANCEMENT PICS/GUITARM.webp" class="card-img-top card-img-fixed" alt="Guitar">
+                        <div class="card-body">
+                            <h5 class="card-title">Guitar Lesson</h5>
+                            <p class="card-text">Master the art of guitar playing with our lessons.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guitarModal">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card slide-in mb-5">
+                        <img src="13-13 TALENT ENHANCEMENT PICS/PIANOM.webp" class="card-img-top card-img-fixed" alt="Piano">
+                        <div class="card-body">
+                            <h5 class="card-title">Piano Lesson</h5>
+                            <p class="card-text">Explore the world of music through our piano lessons.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pianoModal">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals -->
+    <!-- Dancing Modal -->
+    <div class="modal fade" id="dancingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="dancingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dancingModalLabel">Apply for Dancing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="dancingForm">
+                        <div class="form-group">
+                            <label for="inputParticipantName" class="form-label required">Participant Name</label>
+                            <input type="text" id="inputParticipantName" class="form-control" aria-describedby="participantName" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAge" class="form-label required">Age (for only 7 - 15 yrs.old)</label>
+                            <input type="number" id="inputAge" class="form-control" aria-describedby="age" required min="7" max="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress" class="form-label required">Address</label>
+                            <input type="text" id="inputAddress" class="form-control" aria-describedby="address" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContactNumber" class="form-label required">Contact Number of Guardian</label>
+                            <input type="tel" id="inputContactNumber" class="form-control" aria-describedby="contactNumber" pattern="^\d{11}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGuardianName" class="form-label required">Parent / Guardian Name</label>
+                            <input type="text" id="inputGuardianName" class="form-control" aria-describedby="guardianName" maxlength="255" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label required">Participant Picture (JPEG or PNG only)</label>
+                            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png" required>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndSubmitForm('dancingForm')">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Singing Modal -->
+    <div class="modal fade" id="singingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="singingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="singingModalLabel">Apply for Singing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="singingForm">
+                        <div class="form-group">
+                            <label for="inputParticipantName" class="form-label required">Participant Name</label>
+                            <input type="text" id="inputParticipantName" class="form-control" aria-describedby="participantName" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAge" class="form-label required">Age (for only 7 - 15 yrs.old)</label>
+                            <input type="number" id="inputAge" class="form-control" aria-describedby="age" required min="7" max="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress" class="form-label required">Address</label>
+                            <input type="text" id="inputAddress" class="form-control" aria-describedby="address" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContactNumber" class="form-label required">Contact Number of Guardian</label>
+                            <input type="tel" id="inputContactNumber" class="form-control" aria-describedby="contactNumber" pattern="^\d{11}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGuardianName" class="form-label required">Parent / Guardian Name</label>
+                            <input type="text" id="inputGuardianName" class="form-control" aria-describedby="guardianName" maxlength="255" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label required">Participant Picture (JPEG or PNG only)</label>
+                            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png" required>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndSubmitForm('singingForm')">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Guitar Modal -->
+    <div class="modal fade" id="guitarModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="guitarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="guitarModalLabel">Apply for Guitar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="guitarForm">
+                        <div class="form-group">
+                            <label for="inputParticipantName" class="form-label required">Participant Name</label>
+                            <input type="text" id="inputParticipantName" class="form-control" aria-describedby="participantName" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAge" class="form-label required">Age (for only 7 - 15 yrs.old)</label>
+                            <input type="number" id="inputAge" class="form-control" aria-describedby="age" required min="7" max="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress" class="form-label required">Address</label>
+                            <input type="text" id="inputAddress" class="form-control" aria-describedby="address" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContactNumber" class="form-label required">Contact Number of Guardian</label>
+                            <input type="tel" id="inputContactNumber" class="form-control" aria-describedby="contactNumber" pattern="^\d{11}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGuardianName" class="form-label required">Parent / Guardian Name</label>
+                            <input type="text" id="inputGuardianName" class="form-control" aria-describedby="guardianName" maxlength="255" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label required">Participant Picture (JPEG or PNG only)</label>
+                            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png" required>
+                        </div>
+            
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndSubmitForm('guitarForm')">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Piano Modal -->
+    <div class="modal fade" id="pianoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pianoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pianoModalLabel">Apply for Piano</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="pianoForm">
+                        <div class="form-group">
+                            <label for="inputParticipantName" class="form-label required">Participant Name</label>
+                            <input type="text" id="inputParticipantName" class="form-control" aria-describedby="participantName" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAge" class="form-label required">Age (for only 7 - 15 yrs.old)</label>
+                            <input type="number" id="inputAge" class="form-control" aria-describedby="age" required min="7" max="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress" class="form-label required">Address</label>
+                            <input type="text" id="inputAddress" class="form-control" aria-describedby="address" maxlength="255" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputContactNumber" class="form-label required">Contact Number of Guardian</label>
+                            <input type="tel" id="inputContactNumber" class="form-control" aria-describedby="contactNumber" pattern="^\d{11}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGuardianName" class="form-label required">Parent / Guardian Name</label>
+                            <input type="text" id="inputGuardianName" class="form-control" aria-describedby="guardianName" maxlength="255" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label required">Participant Picture (JPEG or PNG only)</label>
+                            <input class="form-control" type="file" id="formFile" accept=".jpg, .jpeg, .png" required>
+                        </div>
+                
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="validateAndSubmitForm('pianoForm')">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Scroll to Top Button-->
+    <a href='#' class="stt" title="scroll to top"></a>
+    <div id="top"></div>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-black mt-5" style="background-color: #EFEFEF;">
+        <div class="container p-4 pb-0">
+            <section class="d-flex justify-content-between align-items-start flex-wrap">
+                <!-- Logo -->
+                <div class="col-12 col-md-auto mb-3 text-center text-md-start">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="img-fluid" style="max-height: 150px;">
+                </div>
+  
+                <!-- Company Info -->
+                <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-start">
+                    <h6 class="mb-4 font-weight-bold">
+                        <b style="color:#A21303">City Youth Development Office</b><br>
+                        <b>Santa Rosa City</b>
+                    </h6>
+                    <p><strong>Location:</strong><br>
+                        <a href="https://www.google.com/maps/dir//14.3117828,121.10502/@14.3110402,121.0964316,15.4z?entry=ttu" target="_blank" class="text-decoration-none location-link" style="color: inherit;">
+                            Santa Rosa Multi-Purpose Complex Main Lobby, Santa Rosa, Philippines.
+                        </a>
+                    </p>
+                    <p><strong>Working Hours:</strong><br>Weekdays <br>08:00am - 05:00pm</p>
+                </div>
+  
+                <!-- Divider -->
+                <div class="d-none d-md-block mx-3" style="border-left: 4px solid black; height: 250px;"></div>
+  
+                <!-- Page Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Page Links</h6>
+                    <p><a href="home.html" class="text-decoration-none page-link" style="color: #A21303;">Home</a></p>
+                    <p><a href="about-cydo.html" class="text-decoration-none page-link" style="color: #A21303;">About</a></p>
+                    <p><a href="latest-news-updates.html" class="text-decoration-none page-link" style="color: #A21303;">News</a></p>
+                    <p><a href="what-is-yorp.html" class="text-decoration-none page-link" style="color: #A21303;">YORP</a></p>
+                    <p><a href="contacts.html" class="text-decoration-none page-link" style="color: #A21303;">Contacts</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Quick Links</h6>
+                    <p><a href="https://nyc.gov.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC</a></p>
+                    <p><a href="https://nyc-sk.com/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC SK</a></p>
+                    <p><a href="https://yorpnyc.org.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC YORP</a></p>
+                </div>
+
+                <!-- More -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">More</h6>
+                    <p><a href="SRCYDO Legalities/faqs.html" class="text-decoration-none page-link" style="color: #A21303;">FAQS</a></p>
+                    <p><a href="SRCYDO Legalities/privacy-policy.html" class="text-decoration-none page-link" style="color: #A21303;">Privacy Policy</a></p>
+                    <p><a href="SRCYDO Legalities/terms-and-condition.html" class="text-decoration-none page-link" style="color: #A21303;">Terms and Condition</a></p>
+                    <p><a href="SRCYDO Legalities/disclaimer.html" class="text-decoration-none page-link" style="color: #A21303;">Disclaimer</a></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #9E0C0C; color: white;">
+            © Santa Rosa City Youth Development Office | All Rights Reserved
+        </div>
+    </footer>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function onScroll() {
+    const elements = document.querySelectorAll('.slide-in, .slide-right-to-left, .pop-in');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    
+    elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + scrollTop;
+      
+      if (scrollTop + windowHeight > elementTop + (element.offsetHeight / 4)) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
+</script>
+
+<script>
+    function updateNavbarTitle() {
+        var navbarTitle = document.getElementById("navbar-title");
+        if (window.innerWidth <= 524) {
+            navbarTitle.textContent = "CYDO";
+        } else {
+            navbarTitle.textContent = "City Youth Development Office";
+        }
+    }
+
+    // Call the function initially
+    updateNavbarTitle();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateNavbarTitle);
+</script>
+</body>
+
+</html>

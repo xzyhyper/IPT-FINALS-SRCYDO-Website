@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is YORP? | SRCYDO Website</title>
+    <link rel="icon" type="image/x-icon" href="SRCYDO MAIN IMAGES/SRCYDO Logo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Navbar */
+.navbar-custom {
+    background-color: #9e0c0c;
+    height: 75px; /* Adjust this value */
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.navbar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-subtitle {
+    font-size: 0.875rem;
+}
+
+.navbar-nav .btn {
+    margin-right: 30px;
+    border-radius: 20px; 
+    font-weight: bold;   
+    padding: 10px 20px;  
+    background-color: #f8f9fa; 
+    color: #9e0c0c;    
+    border: 2px solid #9e0c0c; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.navbar-nav .btn:hover {
+    background-color: #3a1414;
+    color: #f8f9fa;
+}
+
+.navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+
+/* Hover Effect for Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #e2e6ea; 
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Footer */
+.footer-links p {
+    margin-bottom: 8px; 
+}
+.footer-links a.page-link:hover {
+    text-decoration: underline !important;
+}
+.footer-links a:hover,
+    .location-link:hover {
+        text-decoration: underline !important;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/*-------------------------- = DON'T REMOVE = ----------------------------*/
+/* Back to Top Button */
+.stt{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: rgb(223, 255, 128) url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='currentColor' d='M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    box-shadow: 0 0.25rem 0.5rem 0 gray;
+    opacity: 0.6;
+    scroll-behavior: smooth;
+}
+.stt:hover{
+    opacity: 0.9;
+}
+.stt:focus{
+    opacity: 0.9;
+}
+.stt:active{
+    opacity: 1;
+}
+html{
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*-------------------------- ^ DON'T REMOVE ^ ----------------------------*/
+
+/* MAIN CONTENTS OF WHAT IS YORP? */
+.bg-hero{
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(6, 5, 5, 0.47), rgba(6, 5, 5, 0.47)), 
+                url('/8-8 WYORP PICS/Cyanblue\ bg.webp') center center no-repeat;
+    background-size: cover;
+    color: white;
+}
+.bg-hero-content{
+    text-align: center;
+    max-width: 90%;
+}
+.bg-hero-content img{
+    padding-top: 30px;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.bg-hero-content h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+/* Custom styles */
+@media (max-width: 767px) {
+    .step-header, .step-description, .step-list {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.text-center.what-yorp {
+    text-align: center;
+}
+
+.img-size {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+}
+  
+.card-img-fixed {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+  
+.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.align-items-center img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+  
+.yorp-circle-img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid #dee2e6; 
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
+}
+  
+.btn-primary {
+    background-color: #71000d;
+    border-color: #71000d;
+}
+  
+.btn-primary:hover {
+    background-color: #ffffff;
+    border-color: #720110;
+    color: #71000d;
+}
+  
+.card {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.px-4 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-text {
+    flex-grow: 1;
+}
+
+.btn {
+    margin-top: auto;
+}
+
+@media (max-width: 767px) {
+.image-column, .text-column {
+    order: unset;
+    float: none;
+    width: 100%;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    }
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-in.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pop-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.pop-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-right-to-left {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.slide-right-to-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*NEW CODE*/
+@media (max-width: 767px) {
+    .workshop-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!---------------------------- = DON'T REMOVE = ------------------------------>
+    <!---------------------------- = NAVBAR = ------------------------------>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white d-flex align-items-center" href="home.html">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="logo me-2">
+                    <div class="text-start">
+                        <div id="navbar-title" class="navbar-title">City Youth Development Office</div>
+                        <div class="navbar-subtitle">Santa Rosa City</div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: white;">
+                    <span class="bi bi-list" style="color: white;"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                About
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="dropdown-item" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="dropdown-item" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="dropdown-item" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                News
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="dropdown-item" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                YORP
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="dropdown-item" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                                <li><a class="dropdown-item" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="dropdown-item" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light ms-2" href="#">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Side Bar with Accordion Changes -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#aboutCollapse" role="button" aria-expanded="false" aria-controls="aboutCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> About
+                        </a>
+                        <div class="collapse" id="aboutCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="about-cydo.html">About CYDO</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-council.html">CYDO Council</a></li>
+                                <li><a class="nav-link text-dark" href="cydo-staff.html">CYDO Staff</a></li>
+                                <li><a class="nav-link text-dark" href="sk-federation.html">SK Federation</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#newsCollapse" role="button" aria-expanded="false" aria-controls="newsCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> News
+                        </a>
+                        <div class="collapse" id="newsCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="latest-news-updates.html">Latest News Updates</a></li>
+                                <li><a class="nav-link text-dark" href="organization-post.html">Organization Post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#yorpCollapse" role="button" aria-expanded="false" aria-controls="yorpCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> YORP
+                        </a>
+                        <div class="collapse" id="yorpCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="what-is-yorp.html">What is YORP?</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="nav-link text-dark" href="list-of-yo.html">List of Youth Organizations</a></li>
+                                <li><a class="nav-link text-dark" href="list-of-yso.html">List of Youth Service Organizations</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark d-flex justify-content-start align-items-center" data-bs-toggle="collapse" href="#othersCollapse" role="button" aria-expanded="false" aria-controls="othersCollapse">
+                            <i class="bi bi-chevron-down me-2"></i> Others
+                        </a>
+                        <div class="collapse" id="othersCollapse">
+                            <ul class="list-unstyled ps-3">
+                                <li><a class="nav-link text-dark" href="awards.html">Awards</a></li>
+                                <li><a class="nav-link text-dark" href="resolutions.html">Resolutions</a></li>
+                                <li><a class="nav-link text-dark" href="talent-enhancement.html">Talent Enhancement</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light mt-2" href="#">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!---------------------------- ^ DON'T REMOVE ^ ------------------------------>
+
+    <!-- PUT SOME STUFF HERE -->
+    <div class="bg-hero">
+        <div class="bg-hero-content">
+            <!-- Bold White Text -->
+            <h1>Youth Organization Registration Program</h1>
+            <!-- Responsive Image -->
+            <img src="8-8 WYORP PICS/yorp icons.png" alt="Youth Organization" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- NEW CODE -->
+    <div class="container content-custom">
+        <div class="clearfix">
+            <img src="8-8 WYORP PICS/YORP Logo.webp" alt="YORP Logo" class="float-md-end mb-3 ms-md-3 workshop-image" style="max-width: 100%; height: auto; width: 400px;">
+            <div class="text-center" style="position: relative; top: 20px; margin-top: 30px;"> <!-- Added margin-top and centered text -->
+                <div class="step-header pop-in" style="font-size: 18px; font-weight: bold; margin-bottom: 30px;">
+                    <span style="color: #B22222;">WHAT IS</span> YORP?
+                </div>
+                <p style="font-size: 14px;">
+                    <strong>Youth Organization Registration Program (YORP)</strong> 
+                    is a program of the National Youth Commission (NYC). This is to ensure access and participation to a City Wide initiated program within Santa Rosa City. Through this program, the office can link to the youth to provide meaningful programs.
+                </p>
+         
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5 clearfix">
+        <div class="row align-items-center">
+            <!-- Image Column (order-md-1 to make it appear on the left) -->
+            <div class="col-md-6 text-center mb-4 mb-md-0 order-md-1">
+                <img src="8-8 WYORP PICS/step-yorp.webp" alt="Benefits of YORP" class="img-fluid thumbnail col-md-11 float-md-start mb-3 me-md-3 slide-right-to-left" style="height: auto; max-width: 80%; border-radius: 5%; margin-left: 20px;">
+            </div>
+            <!-- Text Column (order-md-2 to make it appear on the right) -->
+            <div class="col-md-6 text-center order-md-2 d-flex flex-column justify-content-center">
+                <div class="pop-in" style="font-size: 18px; font-weight: bold; color: #B22222; margin-bottom: 30px;">
+                    <span>Step by Step To</span> be YORP Registered
+                </div>
+                <p class="step-description text-md-left pop-in" style="text-align: justify;">
+                    To be YORP registered, follow these steps:
+                </p>
+                <p class="step-list px-3 px-md-0 text-md-left pop-in" style="text-align: justify; margin-top: 10px;">
+                    1. First, download the templates provided below.<br>
+                    2. Update the templates with the specific information of your organization.<br>
+                    3. Register your organization on the YORP website.<br>
+                    4. Wait for the confirmation email.<br>
+                    5. Ensure that you meet all the requirements.<br>
+                    6. After meeting the requirements, wait a few days for processing.<br>
+                    7. We will email you once your application is accepted.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom border with margin -->
+    <div class="mt-4">
+        <div style="border-bottom: 5px solid #9E0C0C;"></div>
+    </div>
+    
+    <div class="container mt-5 mb-5">
+        <div class="row align-items-center mb-5">
+            <!-- Image Column (order-md-1 to change order on medium and larger screens) -->
+            <div class="col-md-6 text-center mb-4 mb-md-0 order-md-1">
+                <img src="8-8 WYORP PICS/YORP Group Photo.webp" class="img-fluid rounded-circle thumbnail slide-in" alt="Benefits of YORP" style="max-width: 80%; height: auto;">
+            </div>
+            <!-- Text Column (order-md-2 to change order on medium and larger screens) -->
+            <div class="col-md-6 d-flex align-items-center order-md-2">
+                <div>
+                    <div class="pop-in" style="font-size: 18px; font-weight: bold; color: #B22222; margin-bottom: 30px;">
+                        Benefits of YORP
+                    </div>
+                    <p class="px-3 px-md-0 pop-in" style="color: black; font-size: 14px; text-align: justify;">
+                        Youth Organization Registration Program (YORP) is a program of the National Youth Commission (NYC). This is to ensure access and participation to a City Wide initiated program within Santa Rosa City. Through this program the office can link to the youth to provide meaningful programs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5 mb-5 clearfix">
+        <div class="row align-items-center">
+            <!-- Image Column (order-md-2 to change order on medium and larger screens) -->
+            <div class="col-md-6 text-center mb-4 mb-md-0 order-md-2">
+                <img src="8-8 WYORP PICS/yorp121.webp" alt="Benefits of YORP" class="img-fluid thumbnail col-md-11 float-md-end mb-3 ms-md-3 slide-right-to-left" style="height: auto; max-width: 80%; border-radius: 5%;">
+            </div>
+            <!-- Text Column (order-md-1 to change order on medium and larger screens) -->
+            <div class="col-md-6 text-center order-md-1 d-flex flex-column justify-content-center">
+                <div class="pop-in" style="font-size: 18px; font-weight: bold; color: #B22222; margin-bottom: 30px;">
+                    GOALS OF YORP
+                </div>
+                <p class="px-3 pl-md-8 pop-in" style="text-align: justify;">
+                    1. To inform the youth about CYDO / NYC Programs and Projects.<br>
+                    2. To encourage youth participation in CYDO / NYC programs (CYDO / NYC initiates activities and implements with youth).<br>
+                    3. To establish a communication network between youth and other youth development stakeholders.<br>
+                    4. To establish a youth and youth-serving organizations’ directory.<br>
+                    5. To disseminate updates on youth-related programs, projects and activities.<br>
+                    6. To provide a structure that links youth and youth-serving organizations together.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="pop-in" style="font-size: 20px; font-weight: bold; text-align: center; margin-bottom: 30px;">
+        <span style="color: #B22222;">YORP Requirements</span> and Templates
+    </div>
+
+    <div class="container-fluid px-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2 px-4">
+                <div class="card slide-in">
+                    <img src="8-8 WYORP PICS/YORP FAQS.webp" class="card-img-top img-fluid" alt="Constitution and ByLaws">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Constitution and ByLaws</h5>
+                        <p class="card-text">The format details the organization's principles, structure, governance, and member rights and responsibilities.</p>
+                        <a href="8-8 WYORP PICS/4.-Constitution-and-By-Laws-TEMPLATE [sample only].docx" class="btn btn-primary">Download Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2 px-4">
+                <div class="card slide-in">
+                    <img src="8-8 WYORP PICS/YORP STAFF.webp" class="card-img-top img-fluid" alt="Officers and Adviser">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Officers and Adviser</h5>
+                        <p class="card-text">This format identifies leadership roles, specifying their duties, terms, and responsibilities for guiding and overseeing members.</p>
+                        <a href="8-8 WYORP PICS/2024 YORP Directory of Officers and Adviser.docx" class="btn btn-primary">Download Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2 px-4">
+                <div class="card slide-in">
+                    <img src="8-8 WYORP PICS/YORP REGISTRATION.webp" class="card-img-top img-fluid" alt="Registration Form">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Registration Form</h5>
+                        <p class="card-text">This format provides a standardized document for NYC registration, with essential details about the organization, its goals, activities, and contact information.</p>
+                        <a href="8-8 WYORP PICS/2024 YORP Registration Form.docx" class="btn btn-primary">Download Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-2 px-4">
+                <div class="card slide-in">
+                    <img src="8-8 WYORP PICS/YORP PARLIAMENT.webp" class="card-img-top img-fluid" alt="List of Members">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">List of Members</h5>
+                        <p class="card-text">This document lists active members, including their roles, membership status, contact numbers, and addresses.</p>
+                        <a href="8-8 WYORP PICS/2024-YORP-List-of-Members-in-Good-Standing-rev.xlsx" class="btn btn-primary">Download Now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container slide-in">
+        <div class="form-container">
+            <h2 class="form-title">Register for YORP</h2>
+            <form>
+                <!-- File Uploads -->
+                <div class="mb-3">
+                    <label for="constitutionBylaws" class="form-label">Constitution and ByLaws of Organization</label>
+                    <input class="form-control" type="file" id="constitutionBylaws" required>
+                </div>
+                <div class="mb-3">
+                    <label for="officersAdviser" class="form-label">Officers and Adviser</label>
+                    <input class="form-control" type="file" id="officersAdviser" required>
+                </div>
+                <div class="mb-3">
+                    <label for="registrationForm" class="form-label">Registration Form</label>
+                    <input class="form-control" type="file" id="registrationForm" required>
+                </div>
+                <div class="mb-3">
+                    <label for="listMembers" class="form-label">List of Members</label>
+                    <input class="form-control" type="file" id="listMembers" required>
+                </div>
+
+                <!-- Fill Up -->
+                <div class="mb-3">
+                    <label for="contactGmail" class="form-label">Contact Gmail</label>
+                    <input type="email" class="form-control" id="contactGmail" placeholder="Enter contact Gmail" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contactPerson" class="form-label">Contact Person</label>
+                    <input type="text" class="form-control" id="contactPerson" placeholder="Enter contact person" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Scroll to Top Button-->
+    <a href='#' class="stt" title="scroll to top"></a>
+    <div id="top"></div>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <!--------------------------------- = DON'T CHANGE & REMOVE = --------------------------------------->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-black mt-5" style="background-color: #EFEFEF;">
+        <div class="container p-4 pb-0">
+            <section class="d-flex justify-content-between align-items-start flex-wrap">
+                <!-- Logo -->
+                <div class="col-12 col-md-auto mb-3 text-center text-md-start">
+                    <img src="SRCYDO MAIN IMAGES/SRCYDO Logo.webp" alt="SRCYDO Logo" class="img-fluid" style="max-height: 150px;">
+                </div>
+  
+                <!-- Company Info -->
+                <div class="col-12 col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 text-center text-md-start">
+                    <h6 class="mb-4 font-weight-bold">
+                        <b style="color:#A21303">City Youth Development Office</b><br>
+                        <b>Santa Rosa City</b>
+                    </h6>
+                    <p><strong>Location:</strong><br>
+                        <a href="https://www.google.com/maps/dir//14.3117828,121.10502/@14.3110402,121.0964316,15.4z?entry=ttu" target="_blank" class="text-decoration-none location-link" style="color: inherit;">
+                            Santa Rosa Multi-Purpose Complex Main Lobby, Santa Rosa, Philippines.
+                        </a>
+                    </p>
+                    <p><strong>Working Hours:</strong><br>Weekdays <br>08:00am - 05:00pm</p>
+                </div>
+  
+                <!-- Divider -->
+                <div class="d-none d-md-block mx-3" style="border-left: 4px solid black; height: 250px;"></div>
+  
+                <!-- Page Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Page Links</h6>
+                    <p><a href="home.html" class="text-decoration-none page-link" style="color: #A21303;">Home</a></p>
+                    <p><a href="about-cydo.html" class="text-decoration-none page-link" style="color: #A21303;">About</a></p>
+                    <p><a href="latest-news-updates.html" class="text-decoration-none page-link" style="color: #A21303;">News</a></p>
+                    <p><a href="what-is-yorp.html" class="text-decoration-none page-link" style="color: #A21303;">YORP</a></p>
+                    <p><a href="contacts.html" class="text-decoration-none page-link" style="color: #A21303;">Contacts</a></p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">Quick Links</h6>
+                    <p><a href="https://nyc.gov.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC</a></p>
+                    <p><a href="https://nyc-sk.com/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC SK</a></p>
+                    <p><a href="https://yorpnyc.org.ph/" target="_blank" class="text-decoration-none page-link" style="color: #A21303;">NYC YORP</a></p>
+                </div>
+
+                <!-- More -->
+                <div class="col-12 col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 text-center text-md-start footer-links">
+                    <h6 class="mb-4 font-weight-bold" style="color:#A21303;">More</h6>
+                    <p><a href="SRCYDO Legalities/faqs.html" class="text-decoration-none page-link" style="color: #A21303;">FAQS</a></p>
+                    <p><a href="SRCYDO Legalities/privacy-policy.html" class="text-decoration-none page-link" style="color: #A21303;">Privacy Policy</a></p>
+                    <p><a href="SRCYDO Legalities/terms-and-condition.html" class="text-decoration-none page-link" style="color: #A21303;">Terms and Condition</a></p>
+                    <p><a href="SRCYDO Legalities/disclaimer.html" class="text-decoration-none page-link" style="color: #A21303;">Disclaimer</a></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #9E0C0C; color: white;">
+            © Santa Rosa City Youth Development Office | All Rights Reserved
+        </div>
+    </footer>
+    <!--------------------------------- ^ DON'T CHANGE & REMOVE ^ --------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function onScroll() {
+    const elements = document.querySelectorAll('.slide-in, .slide-right-to-left, .pop-in');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const windowHeight = window.innerHeight;
+    
+    elements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      const elementTop = rect.top + scrollTop;
+      
+      if (scrollTop + windowHeight > elementTop + (element.offsetHeight / 4)) {
+        element.classList.add('visible');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', onScroll);
+  onScroll();
+});
+</script>
+
+<script>
+    function updateNavbarTitle() {
+        var navbarTitle = document.getElementById("navbar-title");
+        if (window.innerWidth <= 524) {
+            navbarTitle.textContent = "CYDO";
+        } else {
+            navbarTitle.textContent = "City Youth Development Office";
+        }
+    }
+
+    // Call the function initially
+    updateNavbarTitle();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", updateNavbarTitle);
+</script>
+</body>
+
+</html>
+
